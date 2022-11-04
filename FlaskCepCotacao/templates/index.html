@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Aprendendo flask</title>
+</head>
+<body>
+    <section class="container">
+        <h1 class="titulo">Cotações e CEP</h1>
+        <p class="subtitulo">Consumindo API e aprendendo flask....</p>
+        <table class="tabela">
+            <tr class="semlink">
+                <th><a href="{{ url_for('cotacao')}}" >Cotacao </th>
+                <th id="teste"><a href="{{ url_for('cep')}}" >CEP</th>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
