@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Aprendendo flask</title>
+</head>
+<body>
+    <section class="container">
+        <h1 class="titulo"><a href="{{ url_for('retorno')}}">Cotações e CEP</a></h1>
+        <p class="subtitulo">Consumindo API e aprendendo flask....</p>
+        <p class="subtitulo"><a href="{{ url_for('cep')}}">Nova Busca</p>
+        <table class="tabela">
+            <tr class="tabela">
+                <th>CEP</th>
+                <th class="thB">Bairro</th>
+            </tr>
+            <tr>
+                <td>{{ consultarCep }}</td>
+                <td class="thB">{{ consultarBairro }}</td>
+            </tr>
+        </table>
+        <table class="tabela">
+            <tr class="tabela">
+                <th>Logradouro</th>
+                <th class="thB">Localidade</th>
+            </tr>
+            <tr>
+                <td>{{ consultarLogradouro }}</td>
+                <td class="thB">{{ consultarLocalidade }}</td>
+            </tr>
+        </table>
+        <table class="tabela">
+            <tr class="tabela">
+
+                <th>UF</th>
+                <th class="thB">DDD</th>
+            </tr>
+            <tr>
+                <td>{{ consultarUf }}</td>
+                <td class="thB">{{ consultarDdd }}</td>
+            </tr>
+        </table>
+        <p class="botaoVoltar"> <a href="{{ url_for('retorno')}}">&#11013;</a></p>
+        <a href="https://www.linkedin.com/in/jonathan-imolesi/" target="_blank"><img src="{{url_for('static', filename='LI-In-Bug.png')}}"/></a>
+    </section>
+</body>
+</html>

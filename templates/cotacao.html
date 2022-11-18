@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Cotação</title>
+</head>
+<body>
+    <section class="container">
+        <h1 class="titulo"><a href="{{ url_for('retorno')}}">Cotações e CEP</a></h1>
+        <p class="subtitulo">Consumindo API e aprendendo flask....</p>
+        <table class="tabela">
+        <tr>
+          <th>Moeda</th>
+          <th id="teste">Valor</th>
+        </tr>
+        <tr>
+          <td>Libra Esterlina</td>
+          <td id="teste">{{ libra }}</td>
+        </tr>
+        <tr>
+          <td>Dolar</td>
+          <td id="teste">{{ dolar }}</td>
+        </tr>
+        <tr>
+          <td>Euro</td>
+          <td id="teste">{{ euro }}</td>
+        </tr>
+        <tr>
+          <td>Bitcoin</td>
+          <td id="teste">{{ bitcoin }}</td>
+        </tr>
+      </table>
+        <p class="botaoVoltar"> <a href="{{ url_for('retorno')}}">&#11013;</a></p>
+        <a href="https://www.linkedin.com/in/jonathan-imolesi/" target="_blank"><img src="{{url_for('static', filename='LI-In-Bug.png')}}"/></a>
+
+    </section>
+</body>
+</html>
